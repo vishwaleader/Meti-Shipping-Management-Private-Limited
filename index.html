@@ -5,41 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Meti Shipping Management Pvt Ltd | Reliable Logistics & Storage Solutions</title>
-    <meta name="description" content="Established in 2008, Meti Shipping Management Private Limited offers premium cargo handling, warehousing, freight forwarding, and vessel chartering from Goa, India.">
+    <title>Meti Shipping Management Pvt Ltd | Global Shipping & Logistics Excellence</title>
+    <meta name="description" content="Established in 2008, Meti Shipping Management Private Limited delivers world-class vessel management, freight forwarding, warehousing, and cargo logistics.">
     <meta name="keywords" content="Meti Shipping, Shipping Management, Transport and Storage, Freight Forwarding, Warehousing, Vessel Chartering, Logistics Goa, Cargo Handling">
     <meta name="author" content="Meti Shipping Management Pvt Ltd">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Meti Shipping Management Pvt Ltd | Reliable Logistics & Storage Solutions">
+    <meta property="og:title" content="Meti Shipping Management Pvt Ltd | Global Shipping & Logistics Excellence">
     <meta property="og:description" content="Comprehensive, safety-focused shipping management and global logistics solutions since 2008.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:image" content="/images/hero-ship.png">
     <meta property="og:type" content="website">
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Embedded CSS Stylesheet -->
     <style>
-        /* CSS variables for core tokens */
+        /* CSS variables matching the Meti Offshore premium theme */
         :root {
-            --color-bg-dark: #0d0d16;
-            --color-bg-card: #161625;
-            --color-bg-nav: rgba(13, 13, 22, 0.85);
-            --color-primary: #0f8b8d;
-            --color-primary-rgb: 15, 139, 141;
-            --color-primary-hover: #0d7577;
-            --color-white: #ffffff;
-            --color-light-ocean: #e6f7f7;
-            --color-muted: #8d9bb0;
+            --color-bg-dark: #0e131f;
+            --color-bg-card: #131a2e;
+            --color-bg-nav: rgba(14, 19, 31, 0.85);
+            --color-primary: #cfa851;      /* Premium warm gold */
+            --color-primary-rgb: 207, 168, 81;
+            --color-primary-foreground: #0e131f;
+            --color-white: #f3f4f6;
+            --color-muted: #9ca3af;
             --color-border: rgba(255, 255, 255, 0.08);
-            --font-sans: 'Inter', sans-serif;
-            --font-heading: 'Oswald', sans-serif;
-            --radius-lg: 16px;
-            --radius-md: 8px;
+            --color-input: rgba(255, 255, 255, 0.06);
+            --font-sans: 'Inter', system-ui, sans-serif;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --radius-lg: 8px;              /* Clean sharp-modern borders */
+            --radius-md: 4px;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -61,6 +61,7 @@
             font-family: var(--font-sans);
             line-height: 1.6;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
         /* Custom Scrollbar */
@@ -75,7 +76,7 @@
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: var(--color-primary-hover);
+            background: #bfa04a;
         }
 
         /* Preloader Styles */
@@ -106,7 +107,7 @@
 
         .loader-bar {
             width: 120px;
-            height: 3px;
+            height: 2px;
             background: rgba(255, 255, 255, 0.1);
             margin: 0 auto;
             position: relative;
@@ -124,7 +125,7 @@
 
         @keyframes pulse-ship {
             0%, 100% { transform: translateY(0) scale(1); opacity: 0.8; }
-            50% { transform: translateY(-10px) scale(1.05); opacity: 1; filter: drop-shadow(0 0 10px rgba(15, 139, 141, 0.6)); }
+            50% { transform: translateY(-10px) scale(1.03); opacity: 1; filter: drop-shadow(0 0 12px rgba(207, 168, 81, 0.5)); }
         }
 
         @keyframes progress-slide {
@@ -132,7 +133,7 @@
             100% { left: 100%; }
         }
 
-        /* Section Layouts */
+        /* Layout Container */
         section {
             padding: 100px 0;
             position: relative;
@@ -145,49 +146,61 @@
             padding: 0 24px;
         }
 
-        /* Utility Section Headers */
+        /* Section Headers matching SectionHeading.tsx */
         .section-header {
-            text-align: center;
             margin-bottom: 60px;
+            max-width: 700px;
         }
 
-        .section-header .subtitle {
-            font-size: 0.8rem;
+        .section-header.center {
+            text-align: center;
+            margin: 0 auto 60px;
+        }
+
+        .section-header .eyebrow {
+            font-size: 0.75rem;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 0.35em;
             color: var(--color-primary);
-            font-weight: 700;
-            margin-bottom: 8px;
-            display: inline-block;
+            margin-bottom: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-header .eyebrow::before {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background-color: var(--color-primary);
+        }
+
+        .section-header.center .eyebrow::after {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background-color: var(--color-primary);
         }
 
         .section-header .title {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
             font-weight: 700;
-            letter-spacing: 1px;
+            line-height: 1.25;
             color: var(--color-white);
-            position: relative;
-            display: inline-block;
-            padding-bottom: 12px;
+            margin-bottom: 20px;
         }
 
-        .section-header .title::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background-color: var(--color-primary);
-            border-radius: 2px;
+        .section-header .desc {
+            color: var(--color-muted);
+            font-size: 1rem;
+            line-height: 1.7;
         }
 
         /* Typography Defaults */
         h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-heading);
-            letter-spacing: 0.5px;
+            color: var(--color-white);
         }
 
         p {
@@ -210,7 +223,7 @@
         /* Scroll Animation Utilities */
         .fade-in-up {
             opacity: 0;
-            transform: translateY(40px);
+            transform: translateY(32px);
             transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -219,16 +232,17 @@
             transform: translateY(0);
         }
 
-        /* Button Component */
+        /* Buttons matching premium look and feel */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 14px 30px;
+            padding: 16px 36px;
             border-radius: 50px;
             font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             cursor: pointer;
             transition: var(--transition);
             border: none;
@@ -237,17 +251,16 @@
 
         .btn-primary {
             background-color: var(--color-primary);
-            color: var(--color-white);
+            color: var(--color-primary-foreground);
         }
 
         .btn-primary:hover {
-            background-color: var(--color-primary-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(15, 139, 141, 0.3);
+            transform: scale(1.03);
+            box-shadow: 0 8px 24px rgba(207, 168, 81, 0.25);
         }
 
         .btn-outline {
-            background-color: transparent;
+            background-color: rgba(14, 19, 31, 0.4);
             color: var(--color-white);
             border: 1px solid var(--color-border);
             backdrop-filter: blur(4px);
@@ -256,7 +269,6 @@
         .btn-outline:hover {
             border-color: var(--color-primary);
             color: var(--color-primary);
-            transform: translateY(-2px);
         }
 
         /* Sticky Navigation Bar */
@@ -268,10 +280,11 @@
             padding: 24px 0;
             z-index: 1000;
             transition: var(--transition);
+            border-bottom: 1px solid transparent;
         }
 
         #navbar.scrolled {
-            padding: 14px 0;
+            padding: 16px 0;
             background-color: var(--color-bg-nav);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--color-border);
@@ -291,15 +304,15 @@
         }
 
         .logo-icon {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: var(--color-primary);
         }
 
         .logo-text {
-            font-family: var(--font-heading);
-            font-size: 1.4rem;
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             line-height: 1.1;
         }
 
@@ -308,20 +321,21 @@
             font-size: 0.65rem;
             font-family: var(--font-sans);
             color: var(--color-muted);
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
             font-weight: 500;
+            margin-top: 2px;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 32px;
+            gap: 36px;
         }
 
         .nav-item a {
             font-size: 0.85rem;
             font-weight: 500;
-            color: var(--color-light-ocean);
+            color: var(--color-muted);
             position: relative;
             padding: 8px 0;
         }
@@ -332,7 +346,7 @@
             left: 0;
             bottom: 0;
             width: 0;
-            height: 2px;
+            height: 1px;
             background-color: var(--color-primary);
             transition: var(--transition);
         }
@@ -344,10 +358,10 @@
 
         .nav-item a:hover,
         .nav-item.active a {
-            color: var(--color-primary);
+            color: var(--color-white);
         }
 
-        /* Hamburger Menu Icon */
+        /* Hamburger Toggle Button */
         .nav-toggle {
             display: none;
             background: transparent;
@@ -363,57 +377,47 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(rgba(13, 13, 22, 0.8), rgba(13, 13, 22, 0.7)),
-                        url('https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            padding-top: 120px;
-        }
-
-        .hero-content {
-            max-width: 800px;
+            background: linear-gradient(rgba(14, 19, 31, 0.75), rgba(14, 19, 31, 0.65)),
+                        url('images/hero-ship.png') no-repeat center center/cover;
+            padding-top: 140px;
+            overflow: hidden;
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background-color: rgba(15, 139, 141, 0.15);
-            border: 1px solid rgba(15, 139, 141, 0.3);
-            border-radius: 50px;
-            padding: 6px 16px;
+            gap: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.35em;
+            color: var(--color-primary);
             margin-bottom: 24px;
         }
 
-        .hero-badge i {
-            color: var(--color-primary);
-            font-size: 0.8rem;
-        }
-
-        .hero-badge span {
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--color-light-ocean);
+        .hero-badge .badge-line {
+            display: inline-block;
+            width: 40px;
+            height: 1px;
+            background-color: var(--color-primary);
         }
 
         .hero-title {
-            font-size: 4rem;
+            font-family: var(--font-serif);
+            font-size: 4.5rem;
             font-weight: 700;
             line-height: 1.15;
             margin-bottom: 24px;
+            max-width: 800px;
             color: var(--color-white);
-        }
-
-        .hero-title span {
-            color: var(--color-primary);
         }
 
         .hero-desc {
             font-size: 1.1rem;
+            line-height: 1.75;
             margin-bottom: 40px;
             max-width: 600px;
-            color: var(--color-light-ocean);
-            opacity: 0.9;
+            color: var(--color-muted);
         }
 
         .hero-actions {
@@ -425,25 +429,30 @@
         /* About Section */
         #about {
             background-color: var(--color-bg-dark);
+            max-width: 1200px;
+            margin: 0 auto;
+            scroll-margin-top: 96px;
         }
 
         .about-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 80px;
             align-items: center;
         }
 
         .about-image {
             position: relative;
-            border-radius: var(--radius-lg);
+            aspect-ratio: 4/3;
             overflow: hidden;
+            border-radius: var(--radius-lg);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             border: 1px solid var(--color-border);
         }
 
         .about-image img {
             width: 100%;
+            height: 100%;
             object-fit: cover;
             transition: var(--transition);
         }
@@ -454,42 +463,39 @@
 
         .about-badge {
             position: absolute;
-            bottom: 24px;
-            left: 24px;
-            background-color: rgba(13, 13, 22, 0.9);
-            border: 1px solid var(--color-primary);
-            border-radius: var(--radius-md);
-            padding: 16px 24px;
-            backdrop-filter: blur(8px);
-            display: flex;
-            align-items: center;
-            gap: 16px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--color-primary);
+            color: var(--color-primary-foreground);
+            padding: 24px 32px;
         }
 
         .about-badge-num {
-            font-family: var(--font-heading);
+            font-family: var(--font-serif);
             font-size: 2.2rem;
             font-weight: 700;
-            color: var(--color-primary);
+            line-height: 1;
+            margin-bottom: 4px;
         }
 
         .about-badge-text {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--color-white);
+            letter-spacing: 2px;
         }
 
         .about-content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+            font-size: 1.25rem;
+            font-weight: 600;
             color: var(--color-white);
+            margin-bottom: 16px;
+            font-family: var(--font-sans);
         }
 
         .about-text {
-            margin-bottom: 30px;
-            line-height: 1.8;
+            line-height: 1.75;
+            margin-bottom: 24px;
         }
 
         .about-keypoints {
@@ -497,106 +503,106 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 16px;
+            margin-top: 32px;
         }
 
         .about-point {
             display: flex;
             align-items: center;
             gap: 12px;
-            font-size: 0.9rem;
-            font-weight: 500;
+            font-size: 0.88rem;
+            color: var(--color-white);
         }
 
-        .about-point i {
-            color: var(--color-primary);
-            font-size: 1rem;
+        .about-point span {
+            width: 6px;
+            height: 6px;
+            background-color: var(--color-primary);
+            border-radius: 50%;
+            flex-shrink: 0;
         }
 
         /* Services Grid Section */
         #services {
-            background-color: #111122;
+            background-color: var(--color-bg-card);
+            scroll-margin-top: 96px;
+        }
+
+        .services-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 24px;
         }
 
         .service-card {
-            background-color: var(--color-bg-card);
+            background-color: var(--color-bg-dark);
             border: 1px solid var(--color-border);
             border-radius: var(--radius-lg);
-            padding: 40px 30px;
+            padding: 40px;
             transition: var(--transition);
-            position: relative;
-            overflow: hidden;
             display: flex;
             flex-direction: column;
-        }
-
-        .service-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: var(--color-primary);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: var(--transition);
+            align-items: flex-start;
         }
 
         .service-card:hover {
             transform: translateY(-8px);
-            border-color: rgba(15, 139, 141, 0.4);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            border-color: rgba(207, 168, 81, 0.4);
         }
 
-        .service-card:hover::after {
-            transform: scaleX(1);
-        }
-
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: var(--radius-md);
-            background-color: rgba(15, 139, 141, 0.1);
+        .service-icon-container {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: 1px solid rgba(207, 168, 81, 0.4);
             color: var(--color-primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 24px;
             transition: var(--transition);
         }
 
-        .service-card:hover .service-icon {
+        .service-card:hover .service-icon-container {
             background-color: var(--color-primary);
-            color: var(--color-white);
-            box-shadow: 0 8px 20px rgba(15, 139, 141, 0.3);
+            color: var(--color-primary-foreground);
         }
 
         .service-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 14px;
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--color-white);
         }
 
         .service-desc {
             font-size: 0.88rem;
+            line-height: 1.65;
+            color: var(--color-muted);
         }
 
-        /* Fleet capabilities visual grid */
+        /* Fleet capabilities grid */
         #fleet {
             background-color: var(--color-bg-dark);
+            scroll-margin-top: 96px;
+        }
+
+        .fleet-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .fleet-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            gap: 24px;
         }
 
         .fleet-card {
@@ -604,7 +610,6 @@
             border-radius: var(--radius-lg);
             overflow: hidden;
             aspect-ratio: 4/5;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             border: 1px solid var(--color-border);
             cursor: pointer;
         }
@@ -619,110 +624,147 @@
         .fleet-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(transparent, rgba(13, 13, 22, 0.95) 85%);
+            background: linear-gradient(to top, rgba(14, 19, 31, 0.95) 15%, rgba(14, 19, 31, 0.2) 60%, transparent);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             padding: 24px;
-            transition: var(--transition);
         }
 
         .fleet-title {
-            font-size: 1.4rem;
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 700;
             color: var(--color-white);
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .fleet-desc {
             font-size: 0.75rem;
             color: var(--color-primary);
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             font-weight: 600;
-            opacity: 0;
-            transform: translateY(10px);
+            opacity: 0.8;
+            transform: translateY(8px);
             transition: var(--transition);
         }
 
         .fleet-card:hover img {
-            transform: scale(1.08);
+            transform: scale(1.06);
         }
 
         .fleet-card:hover .fleet-desc {
-            opacity: 1;
             transform: translateY(0);
         }
 
         /* Why Us Section */
         #why {
-            background-color: #111122;
+            background-color: var(--color-bg-dark);
+            max-width: 1200px;
+            margin: 0 auto;
+            scroll-margin-top: 96px;
         }
 
         .why-wrapper {
             display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 60px;
-            align-items: center;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: stretch;
         }
 
-        .why-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-        }
-
-        .why-desc {
-            margin-bottom: 30px;
-        }
-
-        .why-list {
+        .why-info {
             display: flex;
             flex-direction: column;
-            gap: 24px;
-        }
-
-        .why-item {
-            display: flex;
-            gap: 20px;
-            background-color: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--color-border);
-            padding: 20px;
-            border-radius: var(--radius-lg);
-            transition: var(--transition);
-        }
-
-        .why-item:hover {
-            border-color: rgba(15, 139, 141, 0.3);
-            background-color: rgba(15, 139, 141, 0.03);
-            transform: translateX(6px);
-        }
-
-        .why-icon {
-            font-size: 1.5rem;
-            color: var(--color-primary);
-            width: 44px;
-            height: 44px;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            background-color: rgba(15, 139, 141, 0.1);
-            border-radius: 50%;
-            flex-shrink: 0;
         }
 
-        .why-title {
-            font-size: 1.1rem;
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .why-card {
+            background-color: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+        }
+
+        .why-card i {
+            font-size: 1.3rem;
+            color: var(--color-primary);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .why-card-title {
+            font-size: 1rem;
             font-weight: 600;
-            margin-bottom: 6px;
             color: var(--color-white);
+            margin-bottom: 8px;
         }
 
-        .why-text {
+        .why-card-text {
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+
+        .why-image-panel {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+            aspect-ratio: 3/4;
+            min-height: 520px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--color-border);
+        }
+
+        .why-image-panel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .why-image-panel::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(14, 19, 31, 0.85) 30%, transparent);
+        }
+
+        .why-quote-block {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px;
+            z-index: 2;
+        }
+
+        .why-quote {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 1.4;
+            color: var(--color-white);
+            margin-bottom: 12px;
+        }
+
+        .why-cite {
             font-size: 0.85rem;
+            font-style: normal;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-primary);
+            font-weight: 600;
         }
 
         /* Statistics Counter Section */
         #stats {
-            background: linear-gradient(rgba(15, 139, 141, 0.95), rgba(13, 13, 22, 0.98)),
+            background: linear-gradient(rgba(14, 19, 31, 0.9), rgba(14, 19, 31, 0.95)),
                         url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             padding: 80px 0;
         }
@@ -730,7 +772,7 @@
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+            gap: 24px;
             text-align: center;
         }
 
@@ -739,12 +781,12 @@
         }
 
         .stat-num {
-            font-family: var(--font-heading);
-            font-size: 4rem;
+            font-family: var(--font-serif);
+            font-size: 3.6rem;
             font-weight: 700;
             line-height: 1.1;
-            margin-bottom: 10px;
-            color: var(--color-light-ocean);
+            margin-bottom: 8px;
+            color: var(--color-primary);
         }
 
         .stat-label {
@@ -752,148 +794,131 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 600;
-            color: var(--color-white);
+            color: var(--color-muted);
         }
 
         /* Testimonials Section */
         #testimonials {
             background-color: var(--color-bg-dark);
+            scroll-margin-top: 96px;
+        }
+
+        .testimonials-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 24px;
         }
 
         .testimonial-card {
             background-color: var(--color-bg-card);
             border: 1px solid var(--color-border);
             border-radius: var(--radius-lg);
-            padding: 40px 30px;
-            position: relative;
-        }
-
-        .testimonial-quote {
-            color: rgba(15, 139, 141, 0.15);
-            font-size: 5rem;
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-family: Georgia, serif;
-            line-height: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .testimonial-text {
-            font-style: italic;
-            font-size: 0.9rem;
-            line-height: 1.7;
-            margin-bottom: 24px;
-            position: relative;
-            z-index: 1;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: var(--color-muted);
+            margin-bottom: 30px;
         }
 
         .testimonial-user {
             display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .testimonial-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--color-primary);
+            flex-direction: column;
+            gap: 4px;
         }
 
         .testimonial-name {
-            font-family: var(--font-sans);
             font-size: 0.95rem;
             font-weight: 600;
             color: var(--color-white);
         }
 
         .testimonial-company {
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             color: var(--color-primary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 500;
         }
 
-        /* Contact Section & Form */
+        /* Contact Section */
         #contact {
-            background-color: #111122;
+            background-color: var(--color-bg-dark);
+            scroll-margin-top: 96px;
         }
 
         .contact-wrapper {
             display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: 60px;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .contact-info {
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            justify-content: center;
         }
 
         .contact-info-desc {
-            margin-bottom: 10px;
+            font-size: 1rem;
+            line-height: 1.75;
+            margin-bottom: 40px;
         }
 
         .contact-details {
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 32px;
         }
 
         .contact-detail-item {
             display: flex;
-            gap: 16px;
+            gap: 20px;
             align-items: flex-start;
         }
 
         .contact-detail-icon {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: var(--color-primary);
-            background-color: rgba(15, 139, 141, 0.1);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            margin-top: 4px;
             flex-shrink: 0;
         }
 
         .contact-detail-title {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--color-muted);
-            margin-bottom: 4px;
+            letter-spacing: 1.5px;
+            color: var(--color-primary);
+            margin-bottom: 6px;
+            font-weight: 600;
         }
 
         .contact-detail-value {
             font-size: 0.95rem;
             color: var(--color-white);
-            font-weight: 500;
+            line-height: 1.6;
         }
 
         .contact-form-wrapper {
             background-color: var(--color-bg-card);
             border: 1px solid var(--color-border);
             border-radius: var(--radius-lg);
-            padding: 40px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            padding: 48px;
         }
 
         .form-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 24px;
         }
 
         .form-full {
@@ -911,14 +936,14 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: 600;
-            color: var(--color-light-ocean);
+            color: var(--color-muted);
         }
 
         .form-input {
-            background-color: rgba(255, 255, 255, 0.03);
+            background-color: var(--color-input);
             border: 1px solid var(--color-border);
             border-radius: var(--radius-md);
-            padding: 12px 16px;
+            padding: 14px 18px;
             color: var(--color-white);
             font-family: var(--font-sans);
             font-size: 0.9rem;
@@ -927,60 +952,61 @@
 
         .form-input:focus {
             border-color: var(--color-primary);
-            background-color: rgba(255, 255, 255, 0.05);
+            background-color: rgba(255, 255, 255, 0.08);
             outline: none;
-            box-shadow: 0 0 0 3px rgba(15, 139, 141, 0.15);
         }
 
         select.form-input {
             cursor: pointer;
             appearance: none;
-            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230f8b8d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23cfa851' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
-            background-position: right 16px center;
+            background-position: right 18px center;
             background-size: 16px;
             padding-right: 40px;
         }
 
         textarea.form-input {
             resize: vertical;
-            min-height: 120px;
+            min-height: 140px;
         }
 
         .form-btn-wrapper {
-            margin-top: 10px;
+            margin-top: 12px;
         }
 
         .form-success {
             display: none;
-            background-color: rgba(15, 139, 141, 0.15);
+            background-color: rgba(207, 168, 81, 0.1);
             border: 1px solid var(--color-primary);
             color: var(--color-white);
             border-radius: var(--radius-md);
-            padding: 16px;
-            margin-bottom: 20px;
+            padding: 20px;
+            margin-bottom: 24px;
             font-size: 0.9rem;
             align-items: center;
-            gap: 12px;
+            gap: 16px;
         }
 
         /* Footer Section */
         #footer {
             background-color: var(--color-bg-dark);
             border-top: 1px solid var(--color-border);
-            padding: 60px 0 30px;
+            padding: 80px 0 40px;
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr;
-            gap: 60px;
-            margin-bottom: 40px;
+            gap: 80px;
+            max-width: 1200px;
+            margin: 0 auto 60px;
         }
 
         .footer-col h4 {
+            font-family: var(--font-serif);
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 24px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -988,9 +1014,10 @@
         }
 
         .footer-logo-desc {
-            margin-top: 16px;
+            margin-top: 20px;
             margin-bottom: 24px;
             max-width: 320px;
+            line-height: 1.7;
         }
 
         .footer-socials {
@@ -999,10 +1026,10 @@
         }
 
         .social-link {
-            width: 36px;
-            height: 36px;
+            width: 38px;
+            height: 38px;
             border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.03);
+            background-color: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--color-border);
             display: flex;
             align-items: center;
@@ -1013,7 +1040,7 @@
 
         .social-link:hover {
             background-color: var(--color-primary);
-            color: var(--color-white);
+            color: var(--color-primary-foreground);
             border-color: var(--color-primary);
             transform: translateY(-2px);
         }
@@ -1022,7 +1049,7 @@
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
         }
 
         .footer-links a {
@@ -1032,16 +1059,17 @@
 
         .footer-links a:hover {
             color: var(--color-primary);
-            transform: translateX(4px);
-            display: inline-block;
+            padding-left: 4px;
         }
 
         .footer-bottom {
             border-top: 1px solid var(--color-border);
-            padding-top: 30px;
+            padding-top: 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
             flex-wrap: wrap;
             gap: 20px;
         }
@@ -1053,7 +1081,7 @@
 
         .footer-policy {
             display: flex;
-            gap: 24px;
+            gap: 32px;
             list-style: none;
         }
 
@@ -1075,7 +1103,7 @@
             height: 44px;
             border-radius: 50%;
             background-color: var(--color-primary);
-            color: var(--color-white);
+            color: var(--color-primary-foreground);
             border: none;
             outline: none;
             cursor: pointer;
@@ -1096,21 +1124,20 @@
         }
 
         #back-to-top:hover {
-            background-color: var(--color-primary-hover);
             transform: translateY(-3px);
         }
 
         /* Responsive Breakpoints */
         @media (max-width: 1024px) {
             .hero-title {
-                font-size: 3.2rem;
+                font-size: 3.5rem;
             }
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             .fleet-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
+                gap: 20px;
             }
             .fleet-card {
                 aspect-ratio: 1/1;
@@ -1125,11 +1152,8 @@
             section {
                 padding: 70px 0;
             }
-            .section-header {
-                margin-bottom: 40px;
-            }
             .section-header .title {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             .nav-toggle {
                 display: block;
@@ -1138,7 +1162,7 @@
                 position: fixed;
                 top: 0;
                 right: -100%;
-                width: 280px;
+                width: 300px;
                 height: 100vh;
                 background-color: var(--color-bg-card);
                 flex-direction: column;
@@ -1152,28 +1176,29 @@
             }
             .about-wrapper, .why-wrapper, .contact-wrapper {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 50px;
             }
             .about-image {
                 order: -1;
+            }
+            .why-image-panel {
+                aspect-ratio: 4/3;
+                min-height: auto;
             }
             .testimonials-grid {
                 grid-template-columns: 1fr;
             }
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 50px;
             }
         }
 
         @media (max-width: 576px) {
             .hero-title {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            .fleet-grid {
+            .services-grid, .fleet-grid, .why-grid {
                 grid-template-columns: 1fr;
             }
             .form-grid {
@@ -1188,6 +1213,7 @@
             .footer-bottom {
                 flex-direction: column;
                 text-align: center;
+                gap: 24px;
             }
         }
     </style>
@@ -1233,11 +1259,11 @@
         <div class="container">
             <div class="hero-content fade-in-up">
                 <div class="hero-badge">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <span>Reliable Shipping & Storage Solutions</span>
+                    <span class="badge-line"></span>
+                    <span>Reliable Shipping &amp; Storage Solutions Since 2008</span>
                 </div>
-                <h1 class="hero-title">Navigating Global Logistics <span>Since 2008</span></h1>
-                <p class="hero-desc">Meti Shipping Management Private Limited provides state-of-the-art vessel operations, supply chain transport, and global storage management tailored for efficiency and reliability.</p>
+                <h1 class="hero-title">Global Shipping &amp; Logistics Excellence</h1>
+                <p class="hero-desc">Meti Shipping Management Private Limited delivers world-class vessel operations, supply chain transport, and global warehousing solutions — trusted across international routes since 2008.</p>
                 <div class="hero-actions">
                     <a href="#contact" class="btn btn-primary">Get a Quote</a>
                     <a href="#services" class="btn btn-outline">Explore Services</a>
@@ -1251,28 +1277,29 @@
         <div class="container">
             <div class="about-wrapper">
                 <div class="about-image fade-in-up">
-                    <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Dock yard operation at Goa, India">
+                    <img src="images/about-port.png" alt="Aerial view of a modern shipping port terminal at dusk">
                     <div class="about-badge">
-                        <span class="about-badge-num">18+</span>
-                        <span class="about-badge-text">Years of<br>Excellence</span>
+                        <p class="about-badge-num">2008</p>
+                        <p class="about-badge-text">Incorporated</p>
                     </div>
                 </div>
                 <div class="about-content fade-in-up">
-                    <div class="section-header" style="text-align: left; margin-bottom: 24px;">
-                        <span class="subtitle">About Our Company</span>
-                        <h2 class="title" style="display: block;">Trusted Maritime Partners</h2>
+                    <div class="section-header" style="margin-bottom: 24px;">
+                        <span class="eyebrow">About Us</span>
+                        <h2 class="title">A Legacy Forged on International Waters</h2>
                     </div>
-                    <h3>Incorporated in 2008 &bull; Based in Goa, India</h3>
+                    <h3>Based in Goa, India &bull; Serving Global Routes</h3>
                     <p class="about-text">
-                        Meti Shipping Management Private Limited has been active in transport, shipping logistics, and storage since 2008. From our primary hub in Goa, we administer a comprehensive network of maritime freight, custom warehousing solutions, and international shipping operations.
-                        <br><br>
-                        We coordinate dry and temperature-controlled cargo, customs clearances, supply chain optimization, and vessel chartering to streamline your shipping needs, keeping operations safety-focused and efficient.
+                        Founded in 2008, Meti Shipping Management Private Limited has grown into a highly recognized maritime transport and storage services company. We combine deep operational expertise with an unwavering commitment to safety, compliance, and client success.
+                    </p>
+                    <p class="about-text">
+                        Today, our teams manage cargo flows, port clearances, and complex supply chain logistics across major global ports — supporting bulk transport, container shipments, and warehousing requirements with professional precision.
                     </p>
                     <ul class="about-keypoints">
-                        <li class="about-point"><i class="fa-solid fa-circle-check"></i> International Standards</li>
-                        <li class="about-point"><i class="fa-solid fa-circle-check"></i> Advanced Storage</li>
-                        <li class="about-point"><i class="fa-solid fa-circle-check"></i> Seamless Freight</li>
-                        <li class="about-point"><i class="fa-solid fa-circle-check"></i> Expert Operations</li>
+                        <li class="about-point"><span></span>ISO 9001 &amp; ISM Certified Operations</li>
+                        <li class="about-point"><span></span>Dedicated 24/7 Operations Desk</li>
+                        <li class="about-point"><span></span>Secure Bonded Warehouses</li>
+                        <li class="about-point"><span></span>Customs Clearance Integration</li>
                     </ul>
                 </div>
             </div>
@@ -1282,58 +1309,61 @@
     <!-- SERVICES SECTION -->
     <section id="services">
         <div class="container">
-            <div class="section-header fade-in-up">
-                <span class="subtitle">Our Services</span>
-                <h2 class="title">Logistics & Shipping Capabilities</h2>
-            </div>
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card fade-in-up">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-ship"></i>
-                    </div>
-                    <h3 class="service-title">Freight Forwarding</h3>
-                    <p class="service-desc">Complete end-to-end Air and Sea freight cargo solutions connecting major global trade lanes safely.</p>
+            <div class="services-wrapper">
+                <div class="section-header center fade-in-up">
+                    <span class="eyebrow">Our Services</span>
+                    <h2 class="title">Comprehensive Maritime Solutions</h2>
+                    <p class="desc">From chartering to compliance, we deliver every service your fleet and cargo demand — executed with world-class precision.</p>
                 </div>
-                <!-- Service 2 -->
-                <div class="service-card fade-in-up">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-warehouse"></i>
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card fade-in-up">
+                        <div class="service-icon-container">
+                            <i class="fa-solid fa-ship"></i>
+                        </div>
+                        <h3 class="service-title">Freight Forwarding</h3>
+                        <p class="service-desc">End-to-end Air and Sea freight cargo solutions connecting major global trade lanes safely.</p>
                     </div>
-                    <h3 class="service-title">Warehousing & Storage</h3>
-                    <p class="service-desc">Secure, climate-controlled, and customs-bonded warehousing configurations for all container dimensions.</p>
-                </div>
-                <!-- Service 3 -->
-                <div class="service-card fade-in-up">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-dolly"></i>
+                    <!-- Service 2 -->
+                    <div class="service-card fade-in-up">
+                        <div class="service-icon-container">
+                            <i class="fa-solid fa-warehouse"></i>
+                        </div>
+                        <h3 class="service-title">Warehousing &amp; Storage</h3>
+                        <p class="service-desc">Secure, climate-controlled, and customs-bonded warehousing configurations for all container dimensions.</p>
                     </div>
-                    <h3 class="service-title">Cargo Handling</h3>
-                    <p class="service-desc">Safe terminal processing, heavy-lift management, and container destuffing under strict ISO guidelines.</p>
-                </div>
-                <!-- Service 4 -->
-                <div class="service-card fade-in-up">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-anchor"></i>
+                    <!-- Service 3 -->
+                    <div class="service-card fade-in-up">
+                        <div class="service-icon-container">
+                            <i class="fa-solid fa-dolly"></i>
+                        </div>
+                        <h3 class="service-title">Cargo Handling</h3>
+                        <p class="service-desc">Safe terminal processing, heavy-lift management, and container destuffing under strict ISO guidelines.</p>
                     </div>
-                    <h3 class="service-title">Vessel Chartering</h3>
-                    <p class="service-desc">Dry bulk, liquid cargo, and specialised vessel broker chartering operations for customized maritime routes.</p>
-                </div>
-                <!-- Service 5 -->
-                <div class="service-card fade-in-up">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-file-contract"></i>
+                    <!-- Service 4 -->
+                    <div class="service-card fade-in-up">
+                        <div class="service-icon-container">
+                            <i class="fa-solid fa-anchor"></i>
+                        </div>
+                        <h3 class="service-title">Vessel Chartering</h3>
+                        <p class="service-desc">Dry bulk, liquid cargo, and specialised vessel broker chartering operations for customized maritime routes.</p>
                     </div>
-                    <h3 class="service-title">Customs Clearance</h3>
-                    <p class="service-desc">Fast-track documentation handling, tariffs audit, and customs declaration to ensure smooth ports transition.</p>
-                </div>
-                <!-- Service 6 -->
-                <div class="service-card fade-in-up">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-diagram-project"></i>
+                    <!-- Service 5 -->
+                    <div class="service-card fade-in-up">
+                        <div class="service-icon-container">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+                        <h3 class="service-title">Customs Clearance</h3>
+                        <p class="service-desc">Fast-track documentation handling, tariffs audit, and customs declaration to ensure smooth ports transition.</p>
                     </div>
-                    <h3 class="service-title">Supply Chain Management</h3>
-                    <p class="service-desc">Advanced logistics modeling, route assessment, and digital tracking to optimize transport workflows.</p>
+                    <!-- Service 6 -->
+                    <div class="service-card fade-in-up">
+                        <div class="service-icon-container">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <h3 class="service-title">Supply Chain Management</h3>
+                        <p class="service-desc">Advanced logistics modeling, route assessment, and digital tracking to optimize transport workflows.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1342,41 +1372,44 @@
     <!-- FLEET / CAPABILITIES SECTION -->
     <section id="fleet">
         <div class="container">
-            <div class="section-header fade-in-up">
-                <span class="subtitle">Our Capabilities</span>
-                <h2 class="title">Modern Freight Fleet</h2>
-            </div>
-            <div class="fleet-grid">
-                <!-- Fleet 1 -->
-                <div class="fleet-card fade-in-up">
-                    <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80" alt="Container Cargo Fleet">
-                    <div class="fleet-overlay">
-                        <h3 class="fleet-title">Container Transport</h3>
-                        <span class="fleet-desc">Global Container Carriers</span>
-                    </div>
+            <div class="fleet-wrapper">
+                <div class="section-header center fade-in-up">
+                    <span class="eyebrow">Our Capabilities</span>
+                    <h2 class="title">Modern Freight Fleet</h2>
+                    <p class="desc">Sourcing and deploying state-of-the-art vessel support systems for diverse shipping requirements.</p>
                 </div>
-                <!-- Fleet 2 -->
-                <div class="fleet-card fade-in-up">
-                    <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=800&q=80" alt="Dry Bulk Cargo vessel">
-                    <div class="fleet-overlay">
-                        <h3 class="fleet-title">Dry Cargo</h3>
-                        <span class="fleet-desc">Dry Bulk Carriers</span>
+                <div class="fleet-grid">
+                    <!-- Fleet 1 -->
+                    <div class="fleet-card fade-in-up">
+                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80" alt="Container Cargo Fleet">
+                        <div class="fleet-overlay">
+                            <h3 class="fleet-title">Container</h3>
+                            <span class="fleet-desc">Container Freight</span>
+                        </div>
                     </div>
-                </div>
-                <!-- Fleet 3 -->
-                <div class="fleet-card fade-in-up">
-                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Reefer cold storage">
-                    <div class="fleet-overlay">
-                        <h3 class="fleet-title">Reefer</h3>
-                        <span class="fleet-desc">Temperature Managed Cargo</span>
+                    <!-- Fleet 2 -->
+                    <div class="fleet-card fade-in-up">
+                        <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=800&q=80" alt="Dry Bulk Cargo vessel">
+                        <div class="fleet-overlay">
+                            <h3 class="fleet-title">Dry Cargo</h3>
+                            <span class="fleet-desc">Bulk Carriers</span>
+                        </div>
                     </div>
-                </div>
-                <!-- Fleet 4 -->
-                <div class="fleet-card fade-in-up">
-                    <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80" alt="Tanker Vessel">
-                    <div class="fleet-overlay">
-                        <h3 class="fleet-title">Tankers</h3>
-                        <span class="fleet-desc">Liquid Cargo Management</span>
+                    <!-- Fleet 3 -->
+                    <div class="fleet-card fade-in-up">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Reefer cold storage">
+                        <div class="fleet-overlay">
+                            <h3 class="fleet-title">Reefer</h3>
+                            <span class="fleet-desc">Cold Chain Cargo</span>
+                        </div>
+                    </div>
+                    <!-- Fleet 4 -->
+                    <div class="fleet-card fade-in-up">
+                        <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80" alt="Tanker Vessel">
+                        <div class="fleet-overlay">
+                            <h3 class="fleet-title">Tanker</h3>
+                            <span class="fleet-desc">Liquid Storage Transport</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1388,45 +1421,44 @@
         <div class="container">
             <div class="why-wrapper">
                 <div class="why-info fade-in-up">
-                    <div class="section-header" style="text-align: left; margin-bottom: 24px;">
-                        <span class="subtitle">Why Choose Us</span>
-                        <h2 class="title" style="display: block;">Securing Your Cargo</h2>
+                    <div class="section-header" style="margin-bottom: 24px;">
+                        <span class="eyebrow">Why Meti Shipping</span>
+                        <h2 class="title">The Standard Others Measure Against</h2>
                     </div>
-                    <p class="why-desc">We combine 18 years of specialized operational transport experience with global networking and secure storage facilities, delivering highly efficient logistic routines.</p>
-                    <a href="#contact" class="btn btn-primary">Book Cargo Operations</a>
+                    <p>We combine 18 years of specialized operational transport experience with global networking and secure storage facilities, delivering highly efficient logistic routines.</p>
+                    <div class="why-grid">
+                        <!-- Card 1 -->
+                        <div class="why-card">
+                            <i class="fa-solid fa-award"></i>
+                            <h4 class="why-card-title">Proven Legacy</h4>
+                            <p class="why-card-text">Incorporated in 2008, managing operations through severe market developments and logistics bottlenecks.</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="why-card">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <h4 class="why-card-title">Uncompromising Safety</h4>
+                            <p class="why-card-text">Zero-incident culture backed by ISM-certified systems and rigorous audits.</p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="why-card">
+                            <i class="fa-solid fa-globe"></i>
+                            <h4 class="why-card-title">Global Network</h4>
+                            <p class="why-card-text">Agents in 40+ ports worldwide keep your cargo moving without friction.</p>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="why-card">
+                            <i class="fa-solid fa-clock"></i>
+                            <h4 class="why-card-title">24/7 Operations</h4>
+                            <p class="why-card-text">Round-the-clock operations center providing live tracking and support.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="why-list fade-in-up">
-                    <!-- Item 1 -->
-                    <div class="why-item">
-                        <div class="why-icon"><i class="fa-solid fa-clock"></i></div>
-                        <div>
-                            <h4 class="why-title">18+ Years Experience</h4>
-                            <p class="why-text">Incorporated in 2008, managing operations through severe market developments and logistics bottlenecks.</p>
-                        </div>
-                    </div>
-                    <!-- Item 2 -->
-                    <div class="why-item">
-                        <div class="why-icon"><i class="fa-solid fa-award"></i></div>
-                        <div>
-                            <h4 class="why-title">ISO-Certified Processes</h4>
-                            <p class="why-text">All maritime protocols and freight forwarding checkpoints comply with strict safety certifications.</p>
-                        </div>
-                    </div>
-                    <!-- Item 3 -->
-                    <div class="why-item">
-                        <div class="why-icon"><i class="fa-solid fa-globe"></i></div>
-                        <div>
-                            <h4 class="why-title">Global Network</h4>
-                            <p class="why-text">Strategic connections across major Asian, European, and American ports for cargo clearance speed.</p>
-                        </div>
-                    </div>
-                    <!-- Item 4 -->
-                    <div class="why-item">
-                        <div class="why-icon"><i class="fa-solid fa-headset"></i></div>
-                        <div>
-                            <h4 class="why-title">24/7 Dedicated Support</h4>
-                            <p class="why-text">Round-the-clock tracking, status logging, and operations coordinates updates for freight safety.</p>
-                        </div>
+                
+                <div class="why-image-panel fade-in-up">
+                    <img src="images/vessel-deck.png" alt="Container vessel deck at sea">
+                    <div class="why-quote-block">
+                        <p class="why-quote">“Precision at sea. Reliability on shore.”</p>
+                        <cite class="why-cite">— Our Operating Philosophy</cite>
                     </div>
                 </div>
             </div>
@@ -1439,7 +1471,7 @@
             <div class="stats-grid">
                 <div class="stat-item fade-in-up">
                     <div class="stat-num" data-target="18">0</div>
-                    <div class="stat-label">Years in Operation</div>
+                    <div class="stat-label">Years of Excellence</div>
                 </div>
                 <div class="stat-item fade-in-up">
                     <div class="stat-num" data-target="200">0</div>
@@ -1460,44 +1492,34 @@
     <!-- TESTIMONIALS SECTION -->
     <section id="testimonials">
         <div class="container">
-            <div class="section-header fade-in-up">
-                <span class="subtitle">Testimonials</span>
-                <h2 class="title">What Our Clients Say</h2>
-            </div>
-            <div class="testimonials-grid">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card fade-in-up">
-                    <span class="testimonial-quote">“</span>
-                    <p class="testimonial-text">"Meti Shipping has managed our supply chain routes for 6 years. Their customs handling in Goa and secure container storage options have completely streamlined our shipments."</p>
-                    <div class="testimonial-user">
-                        <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Client avatar">
-                        <div>
+            <div class="testimonials-wrapper">
+                <div class="section-header center fade-in-up">
+                    <span class="eyebrow">Testimonials</span>
+                    <h2 class="title">What Our Partners Say</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card fade-in-up">
+                        <p class="testimonial-text">"Meti Shipping has managed our supply chain routes for six years. Their operational discipline and transparency are unmatched in the industry."</p>
+                        <div class="testimonial-user">
                             <h4 class="testimonial-name">Marcus Vance</h4>
-                            <span class="testimonial-company">Oceania Export Ltd</span>
+                            <span class="testimonial-company">Director of Marine Operations, Oceania Export Ltd</span>
                         </div>
                     </div>
-                </div>
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card fade-in-up">
-                    <span class="testimonial-quote">“</span>
-                    <p class="testimonial-text">"During the global shipping delays, Meti's vessel chartering team sourced alternative bulk carriers for our minerals export in record time. Professional and reliable services."</p>
-                    <div class="testimonial-user">
-                        <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=100&h=100&q=80" alt="Client avatar">
-                        <div>
-                            <h4 class="testimonial-name">Sanjay Sharma</h4>
-                            <span class="testimonial-company">Deccan Ores Private</span>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card fade-in-up">
+                        <p class="testimonial-text">"From chartering to customs, they handle everything with precision. Our cargo has never moved faster or with fewer surprises."</p>
+                        <div class="testimonial-user">
+                            <h4 class="testimonial-name">Sarah Whitfield</h4>
+                            <span class="testimonial-company">Head of Global Logistics, Commodities Trading</span>
                         </div>
                     </div>
-                </div>
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card fade-in-up">
-                    <span class="testimonial-quote">“</span>
-                    <p class="testimonial-text">"Their warehouse temperature logs are spot on. Moving reefer container cargo is complex, but their 24/7 coordinates tracking provides total security for our perishable goods."</p>
-                    <div class="testimonial-user">
-                        <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100&q=80" alt="Client avatar">
-                        <div>
-                            <h4 class="testimonial-name">Eliza Dupont</h4>
-                            <span class="testimonial-company">EuroFood Transnational</span>
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card fade-in-up">
+                        <p class="testimonial-text">"A true partner — their 24/7 operations desk resolved a port congestion crisis overnight and saved us weeks of delay."</p>
+                        <div class="testimonial-user">
+                            <h4 class="testimonial-name">Ahmed Al-Farsi</h4>
+                            <span class="testimonial-company">Fleet Manager, Gulf Shipping Group</span>
                         </div>
                     </div>
                 </div>
@@ -1510,11 +1532,11 @@
         <div class="container">
             <div class="contact-wrapper">
                 <div class="contact-info fade-in-up">
-                    <div class="section-header" style="text-align: left; margin-bottom: 24px;">
-                        <span class="subtitle">Contact Us</span>
-                        <h2 class="title" style="display: block;">Request Operational Quote</h2>
+                    <div class="section-header" style="margin-bottom: 24px;">
+                        <span class="eyebrow">Contact Us</span>
+                        <h2 class="title">Speak With Our Team</h2>
                     </div>
-                    <p class="contact-info-desc">Get in touch with our booking office to dispatch, store, or clear your marine cargo. We respond to quotes requests within 2 business hours.</p>
+                    <p class="contact-info-desc">Get in touch with our booking office to dispatch, store, or clear your marine cargo. We respond to quote requests within 2 business hours.</p>
                     
                     <div class="contact-details">
                         <!-- Address -->
@@ -1562,7 +1584,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="phone-num">Phone Number *</label>
-                                <input class="form-input" type="tel" id="phone-num" required placeholder="+44 20 7946 0958">
+                                <input class="form-input" type="tel" id="phone-num" required placeholder="+91 98230 00000">
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="company-name">Company Name</label>
@@ -1573,9 +1595,9 @@
                                 <select class="form-input" id="inquiry-type" required>
                                     <option value="" disabled selected>Select transport/storage type</option>
                                     <option value="freight">Ocean or Air Freight Forwarding</option>
-                                    <option value="warehouse">Warehousing & Storage Space</option>
+                                    <option value="warehouse">Warehousing &amp; Storage Space</option>
                                     <option value="handling">Cargo Terminal Handling</option>
-                                    <option value="charter">Vessel Brokerage & Chartering</option>
+                                    <option value="charter">Vessel Brokerage &amp; Chartering</option>
                                     <option value="customs">Customs Port Clearance</option>
                                     <option value="integrated">Supply Chain Management</option>
                                 </select>
@@ -1599,7 +1621,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="#home" class="logo" style="margin-bottom: 16px;">
+                    <a href="#home" class="logo" style="margin-bottom: 20px;">
                         <i class="fa-solid fa-anchor logo-icon"></i>
                         <div class="logo-text">METI SHIPPING</div>
                     </a>
@@ -1614,12 +1636,12 @@
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="#home">Home Navigation</a></li>
-                        <li><a href="#about">About Our Operations</a></li>
-                        <li><a href="#services">Our Logistics Services</a></li>
-                        <li><a href="#fleet">Our Vessel Fleet</a></li>
-                        <li><a href="#why">Why Choose Meti</a></li>
-                        <li><a href="#contact">Contact Coordinates</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#fleet">Fleet</a></li>
+                        <li><a href="#why">Why Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -1810,7 +1832,7 @@
             const form = document.getElementById('quote-form');
             const alert = document.getElementById('form-success-alert');
 
-            // HTML5 built-in validation is checked prior to trigger. Show success status.
+            // Show success status.
             alert.style.display = 'flex';
             form.reset();
 
