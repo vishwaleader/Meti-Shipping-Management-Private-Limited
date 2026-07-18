@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Meti Shipping Management Pvt Ltd | Reliable Logistics & Storage Solutions</title>
+    <meta name="description" content="Established in 2008, Meti Shipping Management Private Limited offers premium cargo handling, warehousing, freight forwarding, and vessel chartering from Goa, India.">
+    <meta name="keywords" content="Meti Shipping, Shipping Management, Transport and Storage, Freight Forwarding, Warehousing, Vessel Chartering, Logistics Goa, Cargo Handling">
+    <meta name="author" content="Meti Shipping Management Pvt Ltd">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Meti Shipping Management Pvt Ltd | Reliable Logistics & Storage Solutions">
+    <meta property="og:description" content="Comprehensive, safety-focused shipping management and global logistics solutions since 2008.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Embedded CSS Stylesheet -->
+    <style>
+        /* CSS variables for core tokens */
+        :root {
+            --color-bg-dark: #0d0d16;
+            --color-bg-card: #161625;
+            --color-bg-nav: rgba(13, 13, 22, 0.85);
+            --color-primary: #0f8b8d;
+            --color-primary-rgb: 15, 139, 141;
+            --color-primary-hover: #0d7577;
+            --color-white: #ffffff;
+            --color-light-ocean: #e6f7f7;
+            --color-muted: #8d9bb0;
+            --color-border: rgba(255, 255, 255, 0.08);
+            --font-sans: 'Inter', sans-serif;
+            --font-heading: 'Oswald', sans-serif;
+            --radius-lg: 16px;
+            --radius-md: 8px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Base Resets */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            background-color: var(--color-bg-dark);
+            color: var(--color-white);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--color-bg-dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-primary);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--color-primary-hover);
+        }
+
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: var(--color-bg-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        .loader-content {
+            text-align: center;
+        }
+
+        .loader-icon {
+            font-size: 3rem;
+            color: var(--color-primary);
+            animation: pulse-ship 2s infinite ease-in-out;
+            margin-bottom: 1rem;
+        }
+
+        .loader-bar {
+            width: 120px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+        }
+
+        .loader-progress {
+            width: 40%;
+            height: 100%;
+            background: var(--color-primary);
+            position: absolute;
+            animation: progress-slide 1.5s infinite linear;
+        }
+
+        @keyframes pulse-ship {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.8; }
+            50% { transform: translateY(-10px) scale(1.05); opacity: 1; filter: drop-shadow(0 0 10px rgba(15, 139, 141, 0.6)); }
+        }
+
+        @keyframes progress-slide {
+            0% { left: -40%; }
+            100% { left: 100%; }
+        }
+
+        /* Section Layouts */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Utility Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header .subtitle {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--color-primary);
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        .section-header .title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--color-white);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 12px;
+        }
+
+        .section-header .title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--color-primary);
+            border-radius: 2px;
+        }
+
+        /* Typography Defaults */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            letter-spacing: 0.5px;
+        }
+
+        p {
+            color: var(--color-muted);
+            font-size: 0.95rem;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Scroll Animation Utilities */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Button Component */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(15, 139, 141, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--color-white);
+            border: 1px solid var(--color-border);
+            backdrop-filter: blur(4px);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+
+        /* Sticky Navigation Bar */
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 24px 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        #navbar.scrolled {
+            padding: 14px 0;
+            background-color: var(--color-bg-nav);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--color-border);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            font-size: 1.8rem;
+            color: var(--color-primary);
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        .logo-sub {
+            display: block;
+            font-size: 0.65rem;
+            font-family: var(--font-sans);
+            color: var(--color-muted);
+            letter-spacing: 1.5px;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+
+        .nav-item a {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--color-light-ocean);
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .nav-item a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-primary);
+            transition: var(--transition);
+        }
+
+        .nav-item a:hover::after,
+        .nav-item.active a::after {
+            width: 100%;
+        }
+
+        .nav-item a:hover,
+        .nav-item.active a {
+            color: var(--color-primary);
+        }
+
+        /* Hamburger Menu Icon */
+        .nav-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--color-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Hero Section */
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(13, 13, 22, 0.8), rgba(13, 13, 22, 0.7)),
+                        url('https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            padding-top: 120px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(15, 139, 141, 0.15);
+            border: 1px solid rgba(15, 139, 141, 0.3);
+            border-radius: 50px;
+            padding: 6px 16px;
+            margin-bottom: 24px;
+        }
+
+        .hero-badge i {
+            color: var(--color-primary);
+            font-size: 0.8rem;
+        }
+
+        .hero-badge span {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-light-ocean);
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            color: var(--color-white);
+        }
+
+        .hero-title span {
+            color: var(--color-primary);
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            color: var(--color-light-ocean);
+            opacity: 0.9;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* About Section */
+        #about {
+            background-color: var(--color-bg-dark);
+        }
+
+        .about-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--color-border);
+        }
+
+        .about-image img {
+            width: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            background-color: rgba(13, 13, 22, 0.9);
+            border: 1px solid var(--color-primary);
+            border-radius: var(--radius-md);
+            padding: 16px 24px;
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .about-badge-num {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .about-badge-text {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-white);
+        }
+
+        .about-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--color-white);
+        }
+
+        .about-text {
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .about-keypoints {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .about-point {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .about-point i {
+            color: var(--color-primary);
+            font-size: 1rem;
+        }
+
+        /* Services Grid Section */
+        #services {
+            background-color: #111122;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 40px 30px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--color-primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(15, 139, 141, 0.4);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-md);
+            background-color: rgba(15, 139, 141, 0.1);
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            box-shadow: 0 8px 20px rgba(15, 139, 141, 0.3);
+        }
+
+        .service-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+
+        .service-desc {
+            font-size: 0.88rem;
+        }
+
+        /* Fleet capabilities visual grid */
+        #fleet {
+            background-color: var(--color-bg-dark);
+        }
+
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .fleet-card {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            aspect-ratio: 4/5;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--color-border);
+            cursor: pointer;
+        }
+
+        .fleet-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fleet-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent, rgba(13, 13, 22, 0.95) 85%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+            transition: var(--transition);
+        }
+
+        .fleet-title {
+            font-size: 1.4rem;
+            color: var(--color-white);
+            margin-bottom: 6px;
+        }
+
+        .fleet-desc {
+            font-size: 0.75rem;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: var(--transition);
+        }
+
+        .fleet-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .fleet-card:hover .fleet-desc {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Why Us Section */
+        #why {
+            background-color: #111122;
+        }
+
+        .why-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .why-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .why-desc {
+            margin-bottom: 30px;
+        }
+
+        .why-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 20px;
+            background-color: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--color-border);
+            padding: 20px;
+            border-radius: var(--radius-lg);
+            transition: var(--transition);
+        }
+
+        .why-item:hover {
+            border-color: rgba(15, 139, 141, 0.3);
+            background-color: rgba(15, 139, 141, 0.03);
+            transform: translateX(6px);
+        }
+
+        .why-icon {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(15, 139, 141, 0.1);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .why-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--color-white);
+        }
+
+        .why-text {
+            font-size: 0.85rem;
+        }
+
+        /* Statistics Counter Section */
+        #stats {
+            background: linear-gradient(rgba(15, 139, 141, 0.95), rgba(13, 13, 22, 0.98)),
+                        url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            padding: 80px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item {
+            color: var(--color-white);
+        }
+
+        .stat-num {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 10px;
+            color: var(--color-light-ocean);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: var(--color-white);
+        }
+
+        /* Testimonials Section */
+        #testimonials {
+            background-color: var(--color-bg-dark);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 40px 30px;
+            position: relative;
+        }
+
+        .testimonial-quote {
+            color: rgba(15, 139, 141, 0.15);
+            font-size: 5rem;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-family: Georgia, serif;
+            line-height: 0;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-user {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--color-primary);
+        }
+
+        .testimonial-name {
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--color-white);
+        }
+
+        .testimonial-company {
+            font-size: 0.75rem;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        /* Contact Section & Form */
+        #contact {
+            background-color: #111122;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 60px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .contact-info-desc {
+            margin-bottom: 10px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .contact-detail-icon {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+            background-color: rgba(15, 139, 141, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-detail-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-muted);
+            margin-bottom: 4px;
+        }
+
+        .contact-detail-value {
+            font-size: 0.95rem;
+            color: var(--color-white);
+            font-weight: 500;
+        }
+
+        .contact-form-wrapper {
+            background-color: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-full {
+            grid-column: span 2;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            color: var(--color-light-ocean);
+        }
+
+        .form-input {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            padding: 12px 16px;
+            color: var(--color-white);
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .form-input:focus {
+            border-color: var(--color-primary);
+            background-color: rgba(255, 255, 255, 0.05);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(15, 139, 141, 0.15);
+        }
+
+        select.form-input {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230f8b8d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 16px;
+            padding-right: 40px;
+        }
+
+        textarea.form-input {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-btn-wrapper {
+            margin-top: 10px;
+        }
+
+        .form-success {
+            display: none;
+            background-color: rgba(15, 139, 141, 0.15);
+            border: 1px solid var(--color-primary);
+            color: var(--color-white);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Footer Section */
+        #footer {
+            background-color: var(--color-bg-dark);
+            border-top: 1px solid var(--color-border);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-white);
+        }
+
+        .footer-logo-desc {
+            margin-top: 16px;
+            margin-bottom: 24px;
+            max-width: 320px;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--color-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-muted);
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border-color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            font-size: 0.88rem;
+            color: var(--color-muted);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-primary);
+            transform: translateX(4px);
+            display: inline-block;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--color-border);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: var(--color-muted);
+        }
+
+        .footer-policy {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-policy a {
+            font-size: 0.8rem;
+            color: var(--color-muted);
+        }
+
+        .footer-policy a:hover {
+            color: var(--color-primary);
+        }
+
+        /* Back to top button */
+        #back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        #back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #back-to-top:hover {
+            background-color: var(--color-primary-hover);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 3.2rem;
+            }
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .fleet-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .fleet-card {
+                aspect-ratio: 1/1;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 70px 0;
+            }
+            .section-header {
+                margin-bottom: 40px;
+            }
+            .section-header .title {
+                font-size: 2rem;
+            }
+            .nav-toggle {
+                display: block;
+            }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: var(--color-bg-card);
+                flex-direction: column;
+                padding: 100px 40px;
+                gap: 24px;
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
+                transition: right 0.4s ease;
+            }
+            .nav-links.active {
+                right: 0;
+            }
+            .about-wrapper, .why-wrapper, .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .about-image {
+                order: -1;
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .fleet-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-full {
+                grid-column: span 1;
+            }
+            .contact-form-wrapper {
+                padding: 24px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader-content">
+            <i class="fa-solid fa-ship loader-icon"></i>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION HEADER -->
+    <header id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-anchor logo-icon"></i>
+                <div class="logo-text">
+                    METI SHIPPING
+                    <span class="logo-sub">MANAGEMENT PVT LTD</span>
+                </div>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-menu">
+                <li class="nav-item active"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#about">About</a></li>
+                <li class="nav-item"><a href="#services">Services</a></li>
+                <li class="nav-item"><a href="#fleet">Fleet</a></li>
+                <li class="nav-item"><a href="#why">Why Us</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home">
+        <div class="container">
+            <div class="hero-content fade-in-up">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Reliable Shipping & Storage Solutions</span>
+                </div>
+                <h1 class="hero-title">Navigating Global Logistics <span>Since 2008</span></h1>
+                <p class="hero-desc">Meti Shipping Management Private Limited provides state-of-the-art vessel operations, supply chain transport, and global storage management tailored for efficiency and reliability.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Get a Quote</a>
+                    <a href="#services" class="btn btn-outline">Explore Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-image fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Dock yard operation at Goa, India">
+                    <div class="about-badge">
+                        <span class="about-badge-num">18+</span>
+                        <span class="about-badge-text">Years of<br>Excellence</span>
+                    </div>
+                </div>
+                <div class="about-content fade-in-up">
+                    <div class="section-header" style="text-align: left; margin-bottom: 24px;">
+                        <span class="subtitle">About Our Company</span>
+                        <h2 class="title" style="display: block;">Trusted Maritime Partners</h2>
+                    </div>
+                    <h3>Incorporated in 2008 &bull; Based in Goa, India</h3>
+                    <p class="about-text">
+                        Meti Shipping Management Private Limited has been active in transport, shipping logistics, and storage since 2008. From our primary hub in Goa, we administer a comprehensive network of maritime freight, custom warehousing solutions, and international shipping operations.
+                        <br><br>
+                        We coordinate dry and temperature-controlled cargo, customs clearances, supply chain optimization, and vessel chartering to streamline your shipping needs, keeping operations safety-focused and efficient.
+                    </p>
+                    <ul class="about-keypoints">
+                        <li class="about-point"><i class="fa-solid fa-circle-check"></i> International Standards</li>
+                        <li class="about-point"><i class="fa-solid fa-circle-check"></i> Advanced Storage</li>
+                        <li class="about-point"><i class="fa-solid fa-circle-check"></i> Seamless Freight</li>
+                        <li class="about-point"><i class="fa-solid fa-circle-check"></i> Expert Operations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <span class="subtitle">Our Services</span>
+                <h2 class="title">Logistics & Shipping Capabilities</h2>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-ship"></i>
+                    </div>
+                    <h3 class="service-title">Freight Forwarding</h3>
+                    <p class="service-desc">Complete end-to-end Air and Sea freight cargo solutions connecting major global trade lanes safely.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-warehouse"></i>
+                    </div>
+                    <h3 class="service-title">Warehousing & Storage</h3>
+                    <p class="service-desc">Secure, climate-controlled, and customs-bonded warehousing configurations for all container dimensions.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-dolly"></i>
+                    </div>
+                    <h3 class="service-title">Cargo Handling</h3>
+                    <p class="service-desc">Safe terminal processing, heavy-lift management, and container destuffing under strict ISO guidelines.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-anchor"></i>
+                    </div>
+                    <h3 class="service-title">Vessel Chartering</h3>
+                    <p class="service-desc">Dry bulk, liquid cargo, and specialised vessel broker chartering operations for customized maritime routes.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <h3 class="service-title">Customs Clearance</h3>
+                    <p class="service-desc">Fast-track documentation handling, tariffs audit, and customs declaration to ensure smooth ports transition.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <h3 class="service-title">Supply Chain Management</h3>
+                    <p class="service-desc">Advanced logistics modeling, route assessment, and digital tracking to optimize transport workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLEET / CAPABILITIES SECTION -->
+    <section id="fleet">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <span class="subtitle">Our Capabilities</span>
+                <h2 class="title">Modern Freight Fleet</h2>
+            </div>
+            <div class="fleet-grid">
+                <!-- Fleet 1 -->
+                <div class="fleet-card fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80" alt="Container Cargo Fleet">
+                    <div class="fleet-overlay">
+                        <h3 class="fleet-title">Container Transport</h3>
+                        <span class="fleet-desc">Global Container Carriers</span>
+                    </div>
+                </div>
+                <!-- Fleet 2 -->
+                <div class="fleet-card fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=800&q=80" alt="Dry Bulk Cargo vessel">
+                    <div class="fleet-overlay">
+                        <h3 class="fleet-title">Dry Cargo</h3>
+                        <span class="fleet-desc">Dry Bulk Carriers</span>
+                    </div>
+                </div>
+                <!-- Fleet 3 -->
+                <div class="fleet-card fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Reefer cold storage">
+                    <div class="fleet-overlay">
+                        <h3 class="fleet-title">Reefer</h3>
+                        <span class="fleet-desc">Temperature Managed Cargo</span>
+                    </div>
+                </div>
+                <!-- Fleet 4 -->
+                <div class="fleet-card fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80" alt="Tanker Vessel">
+                    <div class="fleet-overlay">
+                        <h3 class="fleet-title">Tankers</h3>
+                        <span class="fleet-desc">Liquid Cargo Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US SECTION -->
+    <section id="why">
+        <div class="container">
+            <div class="why-wrapper">
+                <div class="why-info fade-in-up">
+                    <div class="section-header" style="text-align: left; margin-bottom: 24px;">
+                        <span class="subtitle">Why Choose Us</span>
+                        <h2 class="title" style="display: block;">Securing Your Cargo</h2>
+                    </div>
+                    <p class="why-desc">We combine 18 years of specialized operational transport experience with global networking and secure storage facilities, delivering highly efficient logistic routines.</p>
+                    <a href="#contact" class="btn btn-primary">Book Cargo Operations</a>
+                </div>
+                <div class="why-list fade-in-up">
+                    <!-- Item 1 -->
+                    <div class="why-item">
+                        <div class="why-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <h4 class="why-title">18+ Years Experience</h4>
+                            <p class="why-text">Incorporated in 2008, managing operations through severe market developments and logistics bottlenecks.</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="why-item">
+                        <div class="why-icon"><i class="fa-solid fa-award"></i></div>
+                        <div>
+                            <h4 class="why-title">ISO-Certified Processes</h4>
+                            <p class="why-text">All maritime protocols and freight forwarding checkpoints comply with strict safety certifications.</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="why-item">
+                        <div class="why-icon"><i class="fa-solid fa-globe"></i></div>
+                        <div>
+                            <h4 class="why-title">Global Network</h4>
+                            <p class="why-text">Strategic connections across major Asian, European, and American ports for cargo clearance speed.</p>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="why-item">
+                        <div class="why-icon"><i class="fa-solid fa-headset"></i></div>
+                        <div>
+                            <h4 class="why-title">24/7 Dedicated Support</h4>
+                            <p class="why-text">Round-the-clock tracking, status logging, and operations coordinates updates for freight safety.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTICS COUNTER SECTION -->
+    <section id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-in-up">
+                    <div class="stat-num" data-target="18">0</div>
+                    <div class="stat-label">Years in Operation</div>
+                </div>
+                <div class="stat-item fade-in-up">
+                    <div class="stat-num" data-target="200">0</div>
+                    <div class="stat-label">Vessels Handled</div>
+                </div>
+                <div class="stat-item fade-in-up">
+                    <div class="stat-num" data-target="4">0</div>
+                    <div class="stat-label">Major Warehouses</div>
+                </div>
+                <div class="stat-item fade-in-up">
+                    <div class="stat-num" data-target="30">0</div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <span class="subtitle">Testimonials</span>
+                <h2 class="title">What Our Clients Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card fade-in-up">
+                    <span class="testimonial-quote">“</span>
+                    <p class="testimonial-text">"Meti Shipping has managed our supply chain routes for 6 years. Their customs handling in Goa and secure container storage options have completely streamlined our shipments."</p>
+                    <div class="testimonial-user">
+                        <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Client avatar">
+                        <div>
+                            <h4 class="testimonial-name">Marcus Vance</h4>
+                            <span class="testimonial-company">Oceania Export Ltd</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card fade-in-up">
+                    <span class="testimonial-quote">“</span>
+                    <p class="testimonial-text">"During the global shipping delays, Meti's vessel chartering team sourced alternative bulk carriers for our minerals export in record time. Professional and reliable services."</p>
+                    <div class="testimonial-user">
+                        <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=100&h=100&q=80" alt="Client avatar">
+                        <div>
+                            <h4 class="testimonial-name">Sanjay Sharma</h4>
+                            <span class="testimonial-company">Deccan Ores Private</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card fade-in-up">
+                    <span class="testimonial-quote">“</span>
+                    <p class="testimonial-text">"Their warehouse temperature logs are spot on. Moving reefer container cargo is complex, but their 24/7 coordinates tracking provides total security for our perishable goods."</p>
+                    <div class="testimonial-user">
+                        <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100&q=80" alt="Client avatar">
+                        <div>
+                            <h4 class="testimonial-name">Eliza Dupont</h4>
+                            <span class="testimonial-company">EuroFood Transnational</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info fade-in-up">
+                    <div class="section-header" style="text-align: left; margin-bottom: 24px;">
+                        <span class="subtitle">Contact Us</span>
+                        <h2 class="title" style="display: block;">Request Operational Quote</h2>
+                    </div>
+                    <p class="contact-info-desc">Get in touch with our booking office to dispatch, store, or clear your marine cargo. We respond to quotes requests within 2 business hours.</p>
+                    
+                    <div class="contact-details">
+                        <!-- Address -->
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <div>
+                                <h4 class="contact-detail-title">Office Address</h4>
+                                <div class="contact-detail-value">Meti Shipping Headquarters, Vasco Da Gama, Goa - 403802, India</div>
+                            </div>
+                        </div>
+                        <!-- Phone -->
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                            <div>
+                                <h4 class="contact-detail-title">Emergency Contact (24/7)</h4>
+                                <div class="contact-detail-value">+91 832 251 0808</div>
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                            <div>
+                                <h4 class="contact-detail-title">Email Communications</h4>
+                                <div class="contact-detail-value">operations@metishipping.co.in</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form Wrapper -->
+                <div class="contact-form-wrapper fade-in-up">
+                    <div class="form-success" id="form-success-alert">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Thank you! Your shipping inquiry has been received. Our operations team will call you shortly.</span>
+                    </div>
+                    <form id="quote-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label" for="full-name">Full Name *</label>
+                                <input class="form-input" type="text" id="full-name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email-addr">Email Address *</label>
+                                <input class="form-input" type="email" id="email-addr" required placeholder="john@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="phone-num">Phone Number *</label>
+                                <input class="form-input" type="tel" id="phone-num" required placeholder="+44 20 7946 0958">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="company-name">Company Name</label>
+                                <input class="form-input" type="text" id="company-name" placeholder="Acme Logistics Ltd">
+                            </div>
+                            <div class="form-group form-full">
+                                <label class="form-label" for="inquiry-type">Inquiry Type *</label>
+                                <select class="form-input" id="inquiry-type" required>
+                                    <option value="" disabled selected>Select transport/storage type</option>
+                                    <option value="freight">Ocean or Air Freight Forwarding</option>
+                                    <option value="warehouse">Warehousing & Storage Space</option>
+                                    <option value="handling">Cargo Terminal Handling</option>
+                                    <option value="charter">Vessel Brokerage & Chartering</option>
+                                    <option value="customs">Customs Port Clearance</option>
+                                    <option value="integrated">Supply Chain Management</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-full">
+                                <label class="form-label" for="message-content">Inquiry Message *</label>
+                                <textarea class="form-input" id="message-content" required placeholder="Specify cargo details, weight, ports of origin/destination, or storage requirements."></textarea>
+                            </div>
+                            <div class="form-group form-full form-btn-wrapper">
+                                <button class="btn btn-primary" type="submit">Submit Request</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#home" class="logo" style="margin-bottom: 16px;">
+                        <i class="fa-solid fa-anchor logo-icon"></i>
+                        <div class="logo-text">METI SHIPPING</div>
+                    </a>
+                    <p class="footer-logo-desc">Active in professional transport, warehousing, and shipping management across global waters since 2008.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home Navigation</a></li>
+                        <li><a href="#about">About Our Operations</a></li>
+                        <li><a href="#services">Our Logistics Services</a></li>
+                        <li><a href="#fleet">Our Vessel Fleet</a></li>
+                        <li><a href="#why">Why Choose Meti</a></li>
+                        <li><a href="#contact">Contact Coordinates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Logistics Hubs</h4>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Marmagao Port Trust, Goa</a></li>
+                        <li><a href="#contact">Nhava Sheva Port, Mumbai</a></li>
+                        <li><a href="#contact">Chennai Marine Terminals</a></li>
+                        <li><a href="#contact">Cochin Container Hubs</a></li>
+                        <li><a href="#contact">Kolkata Docking Yards</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <span class="footer-copy">&copy; 2026 Meti Shipping Management Private Limited. All Rights Reserved.</span>
+                <ul class="footer-policy">
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Port Security Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" aria-label="Back to top" onclick="scrollToTop()">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Embedded JS Scripts -->
+    <script>
+        // PRELOADER DISMISSAL
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+            
+            // Trigger animation for home section immediately
+            const homeContent = document.querySelector('#home .hero-content');
+            if(homeContent) {
+                homeContent.classList.add('active');
+            }
+        });
+
+        // STICKY NAVBAR BACKGROUND
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // BACK TO TOP VISIBILITY
+            const backToTop = document.getElementById('back-to-top');
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // SCROLL TO TOP UTILITY
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // MOBILE NAVIGATION HAMBURGER TOGGLE
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-xmark');
+            } else {
+                icon.classList.replace('fa-xmark', 'fa-bars');
+            }
+        });
+
+        // Auto-close menu when clicking a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.querySelector('i').classList.replace('fa-xmark', 'fa-bars');
+            });
+        });
+
+        // ACTIVE LINK STATUS ON SCROLL
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-links li');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                const link = item.querySelector('a');
+                if (link.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // SCROLL FADE-UP INTERSECTION OBSERVER
+        const fadeUpElements = document.querySelectorAll('.fade-in-up');
+        
+        const fadeUpObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Stop observing once animated in
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        fadeUpElements.forEach(element => {
+            fadeUpObserver.observe(element);
+        });
+
+        // STATS COUNTING ANIMATION
+        const statNums = document.querySelectorAll('.stat-num');
+        let statsAnimated = false;
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !statsAnimated) {
+                    animateStats();
+                    statsAnimated = true;
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        const statsSection = document.getElementById('stats');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        function animateStats() {
+            statNums.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                const duration = 2000; // 2 seconds
+                const startTime = performance.now();
+
+                function updateCount(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const currentVal = Math.floor(progress * target);
+                    
+                    stat.textContent = target === 18 || target === 200 || target === 30 ? `${currentVal}+` : currentVal;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        stat.textContent = target === 18 || target === 200 || target === 30 ? `${target}+` : target;
+                    }
+                }
+                requestAnimationFrame(updateCount);
+            });
+        }
+
+        // CONTACT FORM HANDLING
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById('quote-form');
+            const alert = document.getElementById('form-success-alert');
+
+            // HTML5 built-in validation is checked prior to trigger. Show success status.
+            alert.style.display = 'flex';
+            form.reset();
+
+            // Scroll success message into view
+            alert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Auto-hide alert after 8 seconds
+            setTimeout(() => {
+                alert.style.opacity = '0';
+                setTimeout(() => {
+                    alert.style.display = 'none';
+                    alert.style.opacity = '1';
+                }, 500);
+            }, 8000);
+        }
+    </script>
+</body>
+</html>
